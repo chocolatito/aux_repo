@@ -1,19 +1,90 @@
-## Preguntas:
+# Ensayo para la Demo
 
-- ¿Modalidad de trabajo?
-- ¿Es un solo equipo de profesionales o hay mas de un equipo?
-- ¿Como se jerarquizan los roles y el trabajo en el equipo?
+- Previamente se debe haber preparado la base de datos de prueba, mediante el archivo `seed.rb` (No utilizar el email _"email@email.com"_).
+- Se debe conocer de antemano los parámetros del usuario con rol `admin`.
 
 ---
-- ¿Que perfil les interesa que yo desempeñe?
-- ¿Que objetivos estratégicos se propone AutoScraping en el plazo de 2-5 años?, ¿Que expectativa tienen de mi, para ayudar a alcanzar esos objetivos?
-- ¿Como es el proceso de integración al equipo?
-> Por ejemplo..
-```python
-    X meses de trainee > desafíos técnicos > Jr.
+## Postman
+
+### Auth
+
+#### /auth/register
+```sh
+{"user": {
+    "email":"email@email.com",
+    "password":"password",
+    "last_name":"last_name",
+    "first_name":"first_name",
+    }
+}
 ```
-- ¿Para el rol que me proponen, implica un trabajo muy colaborativo con otros miembros del equipo?
-> Por ejemplo..
-```python
-    Revisiones de código entre compañeros, Reuniones de trabajo, Metodología Scrum, etc.  
+
+> Mencionar token y que se crea como usuario rol 'XYZ'
+
+---
+#### /auth/login
+```sh
+{
+    "email":"admin@email.com",
+    "password":"admin_pass"
+}
 ```
+> Explicar que el user con rol admin, lo crean los administradores de la API
+
+---
+## Swagger
+
+### Announcement
+
+#### POST announcements
+```sh
+{
+  "announcement": {
+    "name": "Ultimo momento!",
+    "content": "El grupo 151 - Go Ruby, es lo máximo!!!!!!!!",
+    "image": "/test.png",
+    "category_id": <same_category>
+  }
+}
+```
+
+#### GET announcements/:id
+- Cargar el `:id` del nuevo `announcement` 
+- Cargar un `:id` invalido (`0`, `-1`, etc.)
+
+#### PUT announcements/:id
+
+- Ejemplo, de actualización invalida.
+```sh
+{
+  "announcement": {
+    "name": 1,
+    "content": "*",
+  }
+}
+```
+
+
+- Ejemplo, de actualización valida.
+```sh
+{
+  "announcement": {
+    "name": "Ultimo momento!",
+    "content": "El talentoso grupo 151 - Go Ruby, es lo máximo!!!!!!!",
+  }
+}
+```
+
+---
+### Slide
+
+#### GET slides
+- Mostrar resultados no paginados.
+
+---
+### Testimonial
+
+#### GET testimonials?page={page}
+
+- Mostrar resultados paginados segun el valor de `page`.
+
