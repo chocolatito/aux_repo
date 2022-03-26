@@ -14,7 +14,7 @@
     "email":"email@email.com",
     "password":"password",
     "last_name":"last_name",
-    "first_name":"first_name",
+    "first_name":"first_name"
     }
 }
 ```
@@ -41,9 +41,9 @@
 {
   "announcement": {
     "name": "Ultimo momento",
-    "content": "El grupo 151 - Go Ruby, es lo máximo!!!!!!!!",
-    "image": "/test.png",
-    "category_id": <same_category>
+    "content": "El grupo 151 - Go Ruby, es lo máximo",
+    "image": "/home/img/test_1.png",
+    "category_id": <id_valido>
   }
 }
 ```
@@ -71,6 +71,7 @@
   "announcement": {
     "name": "Ultimo momento!!!",
     "content": "El talentoso grupo 151 - Go Ruby, es lo máximo!!!!!",
+    "category_id": <id_valido>
   }
 }
 ```
