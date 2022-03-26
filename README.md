@@ -40,7 +40,7 @@
 ```sh
 {
   "announcement": {
-    "name": "Ultimo momento!",
+    "name": "Ultimo momento",
     "content": "El grupo 151 - Go Ruby, es lo máximo!!!!!!!!",
     "image": "/test.png",
     "category_id": <same_category>
@@ -69,8 +69,8 @@
 ```sh
 {
   "announcement": {
-    "name": "Ultimo momento!",
-    "content": "El talentoso grupo 151 - Go Ruby, es lo máximo!!!!!!!",
+    "name": "Ultimo momento!!!",
+    "content": "El talentoso grupo 151 - Go Ruby, es lo máximo!!!!!",
   }
 }
 ```
